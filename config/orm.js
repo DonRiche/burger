@@ -3,19 +3,13 @@ var connection = require("./connection.js");
 // ORM
 // =============================================================
 
-var tableName = "burgers";
-
 var orm = {
-
     // Here our ORM is creating a simple method for performing a query of the entire table.
     // We make use of the callback to ensure that data is returned only once the query is done.
-    selectAll: function (callback) {
+    selectAll: function (tableName, callback) {
         var s = "SELECT * FROM " + tableName;
-
         connection.query(s, function (err, result) {
-
             callback(result);
-
         });
     },
 
@@ -28,7 +22,7 @@ var orm = {
             burgers.text, burgers.complete
         ], function (err, result) {
 
-            callback(result);
+            return (result);
 
         });
     },
@@ -40,7 +34,7 @@ var orm = {
             burgers.text, burgers.id
         ], function (err, result) {
 
-            callback(result);
+            return (result);
 
         });
     }
