@@ -13,31 +13,29 @@ var orm = {
         });
     },
 
+    // insertOne: function (tableName, callback) {
+    //     var s = "INSERT INTO " + tableName + " (text, complete) VALUES (?,?)";
+    //     burgers.complete = burgers.complete || 0;
+    //     connection.query(s, [
+    //         burgers.text, burgers.complete
+    //     ], function (err, result) {
 
+    //         return callback(result);
 
-    insertOne: function (burgers, callback) {
-        var s = "INSERT INTO " + tableName + " (text, complete) VALUES (?,?)";
-        burgers.complete = burgers.complete || 0;
-        connection.query(s, [
-            burgers.text, burgers.complete
-        ], function (err, result) {
+    //     });
+    // },
 
-            return (result);
+    // updateOne: function (tableName, callback) {
+    //     var s = "UPDATE " + tableName + " SET text=? WHERE id=?";
 
-        });
-    },
+    //     connection.query(s, [
+    //         burgers.text, burgers.id
+    //     ], function (err, result) {
 
-    updateOne: function (burgers, callback) {
-        var s = "UPDATE " + tableName + " SET text=? WHERE id=?";
+    //         return callback(result);
 
-        connection.query(s, [
-            burgers.text, burgers.id
-        ], function (err, result) {
-
-            return (result);
-
-        });
-    }
+    //     });
+    // }
 
 };
 

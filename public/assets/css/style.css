@@ -1,0 +1,8 @@
+.burger-lists {
+    display: flex;
+    justify-content: center;
+}
+
+.burger-lists > ul {
+    flex: 1;
+}
